@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-import Head from 'next/head'
 import '../styles/globals.css'
 import Bad from '../components/bad'
 import Check from '../components/check'
@@ -8,28 +7,19 @@ import CheckUser from '../components/checkUser'
 import BadUser from '../components/badUser'
 import Logo from '../components/logo'
 import UserProvider from '../context/userContext'
-
 const Home = () => {
-
   const [badInterface, setBadInterface] = useState()
   const [checkInterface, setCheckInterface] = useState()
-
   const badclick = () => {
     setCheckInterface()
     setBadInterface(<BadUser />)
   }
-
   const checkclick = () => {
     setBadInterface()
     setCheckInterface(<CheckUser />)
   }
-
   return (
     <>
-      <Head>
-        <title>Rehydration Render SSG</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <UserProvider>
         <header className='h-[8vh] sm:h-[15vh] xl:h-[8vh] bg-[#53AFEE] flex justify-center ' >
           <div className='w-[92%] sm:w-[75%] h-[100%] items-center flex justify-between ' >
@@ -51,5 +41,4 @@ const Home = () => {
     </>
   )
 }
-
 export default Home

@@ -1,5 +1,4 @@
 const Check = ({click}) => {
-
   return (
     <svg
       onClick={() => click()}
@@ -14,5 +13,4 @@ const Check = ({click}) => {
     </svg>
   )
 }
-
 export default Check

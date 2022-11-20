@@ -13,5 +13,4 @@ const Bad = ({click}) => {
     </svg>
   )
 }
-
 export default Bad
