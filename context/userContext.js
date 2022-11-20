@@ -1,15 +1,12 @@
 import { createContext, useEffect, useState } from "react";
+import useHasMounted from "../hooks/useHasMounted";
 
 export const UserContext = createContext()
 
 const UserProvider = ({ children }) => {
 
   const [user, setUser] = useState('')
-  const [hasMounted, setHasMounted] = useState(false)
-
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
+  const hasMounted = useHasMounted()
 
   const getUser = () => {
     fetch('https://randomuser.me/api/').then((res) => res.json()).then((data) => dataUser(data)).catch(err => console.log(err))
