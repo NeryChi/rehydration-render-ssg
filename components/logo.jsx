@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <svg
-      className="h-[7vh]"
+      className="h-[7vh] sm:h-[12vh] xl:h-[7vh]"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1074 491.91">
         <g id="Layer_2" className='fill-white' data-name="Layer 2">
