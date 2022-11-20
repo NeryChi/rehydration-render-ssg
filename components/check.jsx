@@ -3,7 +3,7 @@ const Check = ({click}) => {
   return (
     <svg
       onClick={() => click()}
-      className="w-1/3 cursor-pointer justify-self-center"
+      className="h-[10vh] sm:h-[15vh] cursor-pointer justify-self-center"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 511.8 511.8">
       <g id="Layer_2" data-name="Layer 2">
