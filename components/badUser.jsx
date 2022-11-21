@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useHasMounted from "../hooks/useHasMounted";
-const BadUser = () => {
+const BadUser = () => { // Este componente hace lo mismo que el contexto y el commponente <CheckUser/> pero todo en uno y el renderizado de hace desde el cliente
   const [user, setUser] = useState()
   const hasMounted = useHasMounted()
   const getUser = () => {
