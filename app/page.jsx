@@ -10,10 +10,13 @@ import UserProvider from '../context/userContext'
 const Home = () => {
   const [badInterface, setBadInterface] = useState()
   const [checkInterface, setCheckInterface] = useState()
+  /*Utilizo una forma de renderizado condicional basado en variables, inicialmente la variable 'badInterface' no tiene nungun valor, por esa razon no
+    se muestra nada en la seccion 'bad', es hasta hacer click sobre el componente '<Bad/>' que se invocara a un componente externo que rederizara su contenido*/
   const badclick = () => {
-    setCheckInterface()
-    setBadInterface(<BadUser />)
+    setCheckInterface() //Utilizo este metodo del useState para dejar la seccion 'check' unicamente con el componente <Check/>
+    setBadInterface(<BadUser />) //Usando este metodo le paso un nuevo valor a la variable 'badInterface' para que sea renderizado
   }
+  /*Utilizo una forma de renderizado condicional basado en variables*/
   const checkclick = () => {
     setBadInterface()
     setCheckInterface(<CheckUser />)
@@ -29,11 +32,11 @@ const Home = () => {
         </header>
         <main className='grid grid-cols-4 h-[92vh] sm:h-[85vh] xl:h-[92vh]'>
           <section id='bad' className='bg-slate-900 hover:opacity-[97%] flex justify-center items-center duration-300 col-span-2'>
-            {badInterface}
+            {badInterface/*Esta variable inicialmente esta vacia y esta a la espera de recibir contenido nuevo en cuato se haga click en el componente <Bad/>*/}
             <Bad click={() => badclick()} />
           </section>
           <section id='check' className='bg-slate-900 hover:opacity-[97%] flex justify-center items-center duration-300 col-span-2'>
-            {checkInterface}
+            {checkInterface/*Esta variable inicialmente esta vacia y esta a la espera de recibir contenido nuevo en cuato se haga click en el componente <Check/>*/}
             <Check click={() => checkclick()} />
           </section>
         </main>
